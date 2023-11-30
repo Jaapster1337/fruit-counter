@@ -38,10 +38,6 @@ function App() {
                 count={kiwiCount}
                 setCount={setKiwiCount}
             />
-            <Input
-                name="voornaam"
-                type="text"
-            />
             <button type={"button"}
                     onClick={() => setAardbeienCount(aardbeienCount - aardbeienCount) ||
                         setBananenCount(bananenCount - bananenCount) ||
@@ -51,30 +47,44 @@ function App() {
 
             <form className={"form"}>
                 <fieldset>
+                    <div className="inputs">
+                        <Input
+                            name="voornaam"
+                            type="text"
+                        />
 
-
-                        <label htmlFor="achternaam">Achternaam</label>
-                        <input type="text" name="achternaam" id="achternaam"/>
-
-                        <label htmlFor="leeftijd">Leeftijd</label>
-                        <input type="number" name="leeftijd" id="leeftijd" defaultValue="0"/>
-
-                        <label htmlFor="postcode">Postcode</label>
-                        <input type="text" name="postcode" id="postcode"/>
-
-                        <label htmlFor="select">Bezorgfrequentie</label>
-                        <select name="select" id="select">
-                            <option value="wekelijks">Iedere week</option>
-                            <option value="2-wekelijks">Om de week</option>
-                            <option value="maandelijks">Iedere maand</option>
-                        </select>
-
+                        <Input
+                            name="achternaam"
+                            type="text"
+                        />
+                        <Input
+                            name="postcode"
+                            type="text"
+                        />
+                        <Input
+                            name="Bezorgfrequentie"
+                            type="select"
+                        />
                         <div className="radio">
-                            <label htmlFor="overdag">Overdag</label>
-                            <input type="radio" id="overdag" name="overdag" value="overdag"/>
-                            <label htmlFor="savonds">In de avond</label>
-                            <input type="radio" id="savonds" name="savonds" value="in de avond"/>
+                            <Input
+                                name="deliverytime"
+                                type="radio"
+                            />
                         </div>
+                        <Input
+                            name="opmerking"
+                            type="textarea"
+                        />
+                        <Input
+                            name="Voor"
+                            type="checkbox"
+                        />
+                        <Input
+                            name="verzenden"
+                            type="button"
+                        />
+
+                    </div>
                 </fieldset>
             </form>
         </>
