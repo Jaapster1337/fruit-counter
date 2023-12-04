@@ -47,7 +47,7 @@ function Input({type, name, value}) {
             )}
             {type === "button" && (
                 <>
-                    <input type="submit" id={"Verzend"} name={name} value={value}/>
+                    <input type="submit" id={"Verzend"} name={name} value={value} />
                 </>
             )}
         </>
