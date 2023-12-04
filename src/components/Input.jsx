@@ -1,23 +1,22 @@
-function Input({type, name, value}) {
+function Input({type, name, value, onChange}) {
     return (
         <>
-            {console.log(type, name)}
             {type === "text" &&
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <input type={type} name={name} id={name}/>
+                    <input type={type} name={name} id={name} onChange={onChange}/>
                 </>
             }
             {type === "number" && (
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <input type={type} name={name} id={name} defaultValue="0"/>
+                    <input type={type} name={name} id={name} defaultValue="0" onChange={onChange}/>
                 </>
             )}
             {type === "select" && (
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <select name={name} id={name}>
+                    <select name={name} id={name} onChange={onChange}>
                         <option value="wekelijks">Iedere week</option>
                         <option value="2-wekelijks">Om de week</option>
                         <option value="maandelijks">Iedere maand</option>
@@ -27,27 +26,27 @@ function Input({type, name, value}) {
             {type === "radio" && (
                 <>
                     <label htmlFor={name}>{"Overdag"}</label>
-                    <input type={type} id={name} name={name} value={value}/>
+                    <input type={type} id={name} name={name} value={value} checked={} onChange={onChange}/>
                     <label htmlFor={name}>{"s'Avonds"}</label>
-                    <input type={type} id={name} name={name} value={value}/>
+                    <input type={type} id={name} name={name} value={value} onChange={onChange}/>
                 </>
             )}
             {type === "textarea" && (
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <textarea id={name} name={name} rows="5" cols="33">
+                    <textarea id={name} name={name} rows="5" cols="33" onChange={onChange}>
                     </textarea>
                 </>
             )}
             {type === "checkbox" && (
                 <>
                     <label htmlFor={name}>{"Ik ga akkoord met de voorwaarden"}</label>
-                    <input type={type} id={name} name={name}/>
+                    <input type={type} id={name} name={name} onChange={onChange}/>
                 </>
             )}
             {type === "button" && (
                 <>
-                    <input type="submit" id={"Verzend"} name={name} value={value} />
+                    <input type="submit" id={"Verzend"} name={name} value={value} onChange={onChange}/>
                 </>
             )}
         </>

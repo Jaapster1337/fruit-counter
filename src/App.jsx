@@ -14,8 +14,8 @@ function App() {
         voornaam: "",
         achternaam: "",
         postcode: "",
-        bezorgfrequentie: "",
-        deliverytime: "",
+        bezorgfrequentie: "iedere week",
+        deliverytime: "overdag",
         opmerking: "",
         voorwaarden:"",
 
