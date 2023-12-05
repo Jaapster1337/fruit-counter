@@ -14,7 +14,7 @@ function App() {
         voornaam: "",
         achternaam: "",
         postcode: "",
-        bezorgfrequentie: "iedere week",
+        bezorgfrequentie: "wekelijks",
         deliverytime: "overdag",
         opmerking: "",
         voorwaarden:"",
@@ -92,7 +92,7 @@ function App() {
                             onChange={handleChange}
                         />
                         <Input
-                            name="Bezorgfrequentie"
+                            name="bezorgfrequentie"
                             type="select"
                             value={formState.bezorgfrequentie}
                             onChange={handleChange}
@@ -102,6 +102,7 @@ function App() {
                                 name="deliverytime"
                                 type="radio"
                                 onChange={handleChange}
+                                value={formState.deliverytime}
                             />
                         </div>
                         <Input

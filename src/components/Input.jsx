@@ -10,14 +10,14 @@ function Input({type, name, value, onChange}) {
             {type === "number" && (
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <input type={type} name={name} id={name} defaultValue="0" onChange={onChange}/>
+                    <input type={type} name={name} id={name} value={value} onChange={onChange}/>
                 </>
             )}
             {type === "select" && (
                 <>
                     <label htmlFor={name}>{name}</label>
-                    <select name={name} id={name} onChange={onChange}>
-                        <option value="wekelijks">Iedere week</option>
+                    <select name={name} id={name} onChange={onChange} >
+                        <option value="wekelijks" >Iedere week</option>
                         <option value="2-wekelijks">Om de week</option>
                         <option value="maandelijks">Iedere maand</option>
                     </select>
@@ -25,10 +25,10 @@ function Input({type, name, value, onChange}) {
             )}
             {type === "radio" && (
                 <>
-                    <label htmlFor={name}>{"Overdag"}</label>
-                    <input type={type} id={name} name={name} value={value} checked={} onChange={onChange}/>
-                    <label htmlFor={name}>{"s'Avonds"}</label>
-                    <input type={type} id={name} name={name} value={value} onChange={onChange}/>
+                    <label htmlFor={name+"1"}>{"Overdag"}</label>
+                    <input type={type} id={name+"1"} name={name} checked={value === "overdag"} value="overdag" onChange={onChange}/>
+                    <label htmlFor={name+"2"}>{"s'Avonds"}</label>
+                    <input type={type} id={name+"2"} name={name} value="avond" checked={value === "avond"} onChange={onChange}/>
                 </>
             )}
             {type === "textarea" && (
